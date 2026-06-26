@@ -1,320 +1,345 @@
 <div align="center">
 
-<img src="https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer/raw/main/public/logo.png" alt="MediScan 3D Logo" width="160"/>
+<!-- HERO BANNER -->
+<img src="https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer/raw/main/public/poster.png" width="100%" alt="MediScan 3D — Banner" />
 
-# 🩺 MediScan 3D
-### Interactive Health Risk Visualizer
+<br /><br />
 
-**A next-generation 3D medical visualization platform built with Next.js, Three.js & AI**
+<img src="https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer/raw/main/public/logo.png" width="100" alt="MediScan 3D Logo" />
 
-<br/>
+<h1>MediScan 3D</h1>
+<h3>Interactive Health Risk Visualizer</h3>
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-91.7%25-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![Three.js](https://img.shields.io/badge/Three.js-r3f-000000?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer?style=for-the-badge&color=FFD700)](https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer)
+<p><em>Enter your vitals. Watch your body light up in real-time 3D.</em></p>
 
-<br/>
+<br />
 
-<img src="https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer/raw/main/public/poster.png" alt="MediScan 3D Application Poster" width="100%" style="border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);"/>
+<!-- BADGE ROW 1 -->
+<p>
+  <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-91.7%25-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Three.js-R3F-black?style=for-the-badge&logo=three.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+</p>
 
-<br/><br/>
+<!-- BADGE ROW 2 -->
+<p>
+  <img src="https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white" />
+  <img src="https://img.shields.io/badge/Zod-Validation-3E67B1?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/pnpm-9%2B-F69220?style=for-the-badge&logo=pnpm&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+</p>
 
-> **Enter your vitals. Watch your body respond in real-time 3D.**  
-> MediScan 3D maps clinical health risk scores directly onto an interactive humanoid model — organs glow, pulse, and respond to your data.
+<!-- BADGE ROW 3 -->
+<p>
+  <img src="https://img.shields.io/badge/AI-xAI_%2F_Groq-8B5CF6?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/⭐-Star_This_Repo-FFD700?style=for-the-badge" />
+</p>
 
-<br/>
+<br />
 
-[🚀 Live Demo](#-deployment) · [📖 Docs](#️-system-architecture--data-flow) · [🐛 Report Bug](https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer/issues) · [✨ Request Feature](https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer/issues)
+<p>
+  <a href="#-overview"><strong>Overview</strong></a> ·
+  <a href="#-3d-body-engine"><strong>3D Engine</strong></a> ·
+  <a href="#-tech-stack"><strong>Tech Stack</strong></a> ·
+  <a href="#-getting-started"><strong>Getting Started</strong></a> ·
+  <a href="#-architecture"><strong>Architecture</strong></a> ·
+  <a href="#-ai-integration"><strong>AI Integration</strong></a> ·
+  <a href="#-deployment"><strong>Deploy</strong></a>
+</p>
 
 </div>
-
----
-
-## 📋 Table of Contents
-
-- [🌟 Overview](#-overview)
-- [✨ Key Features](#-key-features)
-- [🩺 3D Humanoid Body Model Engine](#-3d-humanoid-body-model-engine)
-  - [📐 Scene Architecture & Layout](#-3d-scene-architecture--layout)
-  - [💡 Lighting & Camera Setup](#-lighting--camera-setup)
-  - [🎨 Color & Emissive Pulsing](#-color--emissive-pulsing-algorithms)
-  - [🎮 User Interactions](#-user-interactions)
-- [🏗️ System Architecture & Data Flow](#️-system-architecture--data-flow)
-- [🚀 Tech Stack](#-tech-stack)
-- [💻 Local Development](#-local-development)
-- [☁️ Deployment](#️-deployment)
-- [📁 Project Structure](#-project-structure)
-- [🧠 AI Integration](#-ai-integration)
-- [⚖️ Clinical Disclaimer](#️-clinical-disclaimer)
-- [🤝 Contributing](#-contributing)
 
 ---
 
 ## 🌟 Overview
 
-**MediScan 3D** is a modern, interactive web application that transforms raw health vitals into a living, breathing 3D visualization. Enter basic biometrics — age, BMI, blood pressure, glucose, cholesterol — and watch a procedural 3D human body model respond in real time.
+**MediScan 3D** is a next-generation clinical screening prototype that turns raw biometric data into a living, breathing 3D body visualization. It combines a procedural **Three.js humanoid model** with a **clinical risk scoring engine** and optional **LLM-powered explanations** — all wrapped in a dark, cyberpunk-medical web interface.
 
-Organs and body regions **dynamically light up, pulse, and change color** based on calculated health risk scores. An intelligent clinical analysis panel, powered by a built-in rule-based engine (with optional **xAI/Grok** or **Groq AI** completions), provides plain-language explanations of your assessment.
+> Input your vitals → watch organs glow and pulse → get an AI-written clinical breakdown — entirely in the browser.
 
-```
-🟢 Low Risk (0–25)     → Green glow, calm pulse
-🟡 Moderate Risk (26–50) → Amber glow, elevated state
-🔴 High Risk (51–100)   → Red, rhythmic pulsing alert
-```
+### What makes it different
 
----
-
-## ✨ Key Features
-
-| Feature | Description |
-|---------|-------------|
-| 🫀 **3D Body Model** | Procedural humanoid rendered with React Three Fiber & Three.js |
-| 💓 **Live Pulsing Animation** | Sine-wave emissive glow responds dynamically to risk thresholds |
-| 🧮 **Clinical Risk Engine** | Formula-based scoring using standard medical screening thresholds |
-| 🤖 **AI Analysis Panel** | xAI/Grok or Groq completions with local rule-engine fallback |
-| 🎮 **Full Orbit Controls** | Drag, zoom, pan — explore every angle of the humanoid model |
-| 🌑 **Dark Clinical UI** | Cyberpunk-medical aesthetic powered by Tailwind CSS |
-| 📱 **Responsive Design** | Fully optimized for desktop and mobile viewports |
-| 🔒 **No Data Stored** | All computation is client-side; your health data never leaves your browser |
+| Traditional Health Apps | MediScan 3D |
+|------------------------|-------------|
+| Static charts and numbers | Live 3D pulsing humanoid model |
+| Generic risk categories | Per-organ emissive glow by clinical zone |
+| Copy-paste health tips | xAI / Groq LLM natural-language explanations |
+| Forms with no visual feedback | Real-time React Three Fiber scene updates |
+| No spatial interaction | Full orbit: drag, zoom, pan around your body |
+| Backend / data storage | 100% client-side, zero data leaves the browser |
 
 ---
 
-## 🩺 3D Humanoid Body Model Engine
+## 🎯 Feature Highlights
 
-The centerpiece of MediScan 3D is its **interactive, procedural Three.js scene** built with [React Three Fiber (R3F)](https://docs.pmnd.rs/react-three-fiber) and [`@react-three/drei`](https://github.com/pmndrs/drei). Clinical risk scores map directly onto physical geometric segments of the humanoid body.
+<table>
+<tr>
+<td width="50%">
 
-### 📐 3D Scene Architecture & Layout
+### 🫀 Procedural 3D Body Model
+A humanoid assembled from `THREE.CylinderGeometry` and `THREE.SphereGeometry` primitives. Each body region maps to a distinct clinical risk zone — torso for cardiovascular, midsection for metabolic.
 
-The model is assembled from procedural geometries carefully positioned to resemble a human form:
+</td>
+<td width="50%">
+
+### 💓 Emissive Pulse Animation
+High-risk zones (score > 50) trigger a breathing glow in the R3F `useFrame` loop. Torso and midsection pulse **180° out of phase** — simulating natural cardiac/digestive rhythm asynchrony.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🧮 Transparent Clinical Engine
+Scoring uses published screening thresholds: JNC blood pressure stages, WHO BMI categories, ADA glucose ranges, NCEP cholesterol bands. Pure formulae — no black-box model.
+
+</td>
+<td width="50%">
+
+### 🤖 AI Explanation Panel
+Connect xAI/Grok or Groq for natural-language clinical analysis. No API key? The built-in rule engine fires instead — zero external dependency required for core functionality.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🎮 Full Orbit Controls
+Drag to rotate, scroll to zoom, right-click to pan. The model auto-rotates for passive display and **freezes on hover** so you can inspect specific regions.
+
+</td>
+<td width="50%">
+
+### 🔒 Privacy by Architecture
+Your health data never leaves your browser. No backend, no database, no telemetry. Builds to a static export deployable on any CDN or self-hosted server.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🩺 3D Body Engine
+
+<a name="-3d-body-engine"></a>
+
+The core of MediScan 3D is a **procedural Three.js scene** driven by [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) and [`@react-three/drei`](https://github.com/pmndrs/drei). Clinical risk scores computed in `lib/riskScore.ts` pipe directly into material properties on the live 3D mesh.
+
+### Scene Geometry Map
 
 ```
-         ┌──────────────────────────────────────────────────────────┐
-         │                  MEDISCAN 3D BODY MODEL                  │
-         └──────────────────────────────────────────────────────────┘
+                    ╔═══════════════════════════════════════════╗
+                    ║        MEDISCAN 3D — BODY GEOMETRY MAP    ║
+                    ╚═══════════════════════════════════════════╝
 
-              ┌───────┐
-              │  HEAD │  ← Sphere (r=0.35) @ [0, 2.2, 0]
-              └───┬───┘    Baseline reference — Blue-gray
-                  │
-         ┌────┐   │   ┌────┐
-         │ARM │   │   │ ARM│  ← Cylinders (r=0.15, h=0.9) — Aesthetic support
-         └────┘   │   └────┘
-               ┌──┴──┐
-               │TORSO│  ← Cylinder (r=0.4, h=1.2) @ [0, 0.8, 0]
-               │ ❤️  │    CARDIOVASCULAR RISK ZONE
-               └──┬──┘    (Blood Pressure + Age + Cholesterol)
-               ┌──┴──┐
-               │ MID │  ← Cylinder (r=0.42, h=0.5) @ [0, 0.2, 0.1]
-               │ 🍬  │    DIABETES / METABOLIC RISK ZONE
-               └──┬──┘    (BMI + Age + Glucose) — Out-of-phase pulse
-              ┌───┴───┐
-           ┌──┘       └──┐
-           │ LEG     LEG │  ← Cylinders (r=0.18, h=1.2) — Aesthetic support
-           └─────────────┘
+                         ┌──────────────────┐
+                         │      HEAD        │  SphereGeometry  r=0.35
+                         │   [0, 2.2, 0]    │  Blue-gray  —  baseline reference
+                         └────────┬─────────┘
+              ┌────────┐          │          ┌────────┐
+              │  LEFT  │          │          │ RIGHT  │   CylinderGeometry
+              │   ARM  │          │          │  ARM   │   r=0.15  h=0.9
+              └────────┘          │          └────────┘   aesthetic only / no risk zone
+                          ┌───────┴────────┐
+                          │     TORSO      │  CylinderGeometry  r=0.4  h=1.2
+                          │  [0, 0.8, 0]   │  ─────────────────────────────────────
+                          │  ♥  CARDIO     │  CARDIOVASCULAR RISK ZONE
+                          │                │  Inputs: Systolic BP · Age · Cholesterol
+                          └───────┬────────┘  Pulse: sin(t × 0.004)
+                          ┌───────┴────────┐
+                          │  MIDSECTION    │  CylinderGeometry  r=0.42  h=0.5
+                          │ [0, 0.2, 0.1]  │  ─────────────────────────────────────
+                          │  🍬 METABOLIC  │  DIABETES / METABOLIC RISK ZONE
+                          │                │  Inputs: BMI · Age · Fasting Glucose
+                          └───────┬────────┘  Pulse: sin(t × 0.004 + π)  ← 180° offset
+                   ┌─────────────┴─────────────┐
+              ┌────┴─────┐               ┌─────┴────┐
+              │  L LEG   │               │  R LEG   │  CylinderGeometry
+              │  r=0.18  │               │  r=0.18  │  h=1.2
+              └──────────┘               └──────────┘  aesthetic only / no risk zone
 ```
 
-### 💡 Lighting & Camera Setup
-
-The scene uses a layered, multi-light rig for a professional medical/cyberpunk look:
-
-| Light | Position | Intensity | Role |
-|-------|----------|-----------|------|
-| **Camera** | `[0, 0, 3.5]` | FOV: 50 | Framing & depth |
-| **Ambient** | Global | 0.6 | Prevents total shadows |
-| **Key Point Light** | `[5, 5, 5]` | 0.8 | Main highlight |
-| **Accent Point Light** | `[-5, -5, 5]` | 0.4 | Cyan `#06b6d4` glow — cyberpunk feel |
-| **Background Sphere** | Center | Opacity: 0.2 | Spatial depth & ambience |
-
-### 🎨 Color & Emissive Pulsing Algorithms
-
-Risk levels are mapped to visual materials via custom `MeshPhongMaterial` shaders:
+### Color → Risk Mapping (MeshPhongMaterial)
 
 ```
-Risk Score 0–25   →  🟢 #10b981  (Emerald Green)  — Safe, healthy baseline
-Risk Score 26–50  →  🟡 #f59e0b  (Amber Yellow)   — Warning: preventive measures needed
-Risk Score 51–100 →  🔴 #ef4444  (Alert Red)      — High risk: pulsing emissive glow
+  Score   0 – 25  │  🟢  #10b981  Emerald  │  Safe. Healthy baseline. No emissive.
+  Score  26 – 50  │  🟡  #f59e0b  Amber    │  Warning. Preventive action advised.
+  Score  51 – 100 │  🔴  #ef4444  Red      │  High risk. Emissive sine-wave pulse ON.
 ```
 
-#### 💓 Pulsing Glow Effect
+### Emissive Pulsing Code
 
-When risk score exceeds **50**, an emissive breathing animation activates inside R3F's render loop (`useFrame`):
+When a body region's risk score exceeds **50**, the R3F `useFrame` hook activates a sine-wave emissive glow:
 
 ```typescript
-// Torso — Cardiovascular risk pulse
-const pulseIntensity = 0.8 + Math.sin(Date.now() * 0.004) * 0.2;
-torsoRef.current.material.emissive.setHex(
-  parseInt(torsoColor.slice(1), 16) * (pulseIntensity * 0.3)
-);
+// components/BodyModel.tsx — inside useFrame()
 
-// Midsection — Metabolic risk pulse (π phase offset for bio-rhythmic feel)
+// ── Torso: cardiovascular risk ─────────────────────────────────────────────
+const pulseIntensity = 0.8 + Math.sin(Date.now() * 0.004) * 0.2;
+(torsoRef.current.material as THREE.MeshPhongMaterial).emissive
+  .setHex(parseInt(torsoColor.slice(1), 16) * (pulseIntensity * 0.3));
+
+// ── Midsection: metabolic risk (π phase offset) ────────────────────────────
 const midPulse = 0.8 + Math.sin(Date.now() * 0.004 + Math.PI) * 0.2;
-midRef.current.material.emissive.setHex(
-  parseInt(midColor.slice(1), 16) * (midPulse * 0.3)
-);
+(midRef.current.material as THREE.MeshPhongMaterial).emissive
+  .setHex(parseInt(midColor.slice(1), 16) * (midPulse * 0.3));
 ```
 
-The **torso** (cardiovascular) and **midsection** (metabolic) pulse **180° out of phase** — mimicking the natural asynchronous rhythm of heart and digestive system activity.
+The **π phase offset** means the torso and midsection glow peaks are perfectly staggered — mimicking the natural asynchrony between cardiovascular and digestive system rhythms.
 
-### 🎮 User Interactions
+### Lighting Rig
 
-- **🖱️ Orbit Controls** — Drag to orbit, scroll to zoom, right-click to pan
-- **🔄 Auto-rotation** — Constant Y-axis rotation at speed `2` for passive display
-- **⏸️ Hover Stabilization** — Rotation pauses on pointer hover for detailed inspection
-- **📍 Region Highlighting** — Torso and midsection respond independently to different risk profiles
+| Light | Type | Position | Intensity | Color | Purpose |
+|-------|------|----------|-----------|-------|---------|
+| Camera | PerspectiveCamera | `[0, 0, 3.5]` | FOV 50 | — | Scene framing and depth |
+| Ambient | AmbientLight | Global | `0.6` | White | Prevents total shadow |
+| Key | PointLight | `[5, 5, 5]` | `0.8` | White | Primary highlights |
+| Accent | PointLight | `[-5, -5, 5]` | `0.4` | `#06b6d4` cyan | Cyberpunk medical aesthetic |
+| Depth Sphere | Mesh transparent | Center | Opacity `0.2` | `#06b6d4` | Spatial depth reference |
+
+### Interaction Model
+
+```
+hover model   →  userData.isInteracting = true   →  auto-rotation pauses
+leave model   →  userData.isInteracting = false  →  auto-rotation resumes at speed 2
+drag          →  OrbitControls.onPointerDown      →  orbit (drag / zoom / pan)
+```
 
 ---
 
-## 🏗️ System Architecture & Data Flow
+## 🏗️ Architecture
+
+<a name="-architecture"></a>
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                     FRONTEND USER INTERFACE                         │
-│                                                                     │
-│   [User Inputs Vitals]  ──►  [VitalsForm Component]                │
-│       Age, BMI, BP,                  ↓                             │
-│       Glucose, Chol.      [lib/riskScore.ts — Risk Engine]         │
-└──────────────────────────────────┬──────────────────────────────────┘
-                                   │
-                         ┌─────────▼──────────┐
-                         │   CORE PROCESSING   │
-                         │                     │
-                         │  Cardiovascular ──► │
-                         │  Diabetes       ──► │── Risk Score Object
-                         │  Metabolic      ──► │
-                         └────┬──────────┬─────┘
-                              │          │
-               ┌──────────────▼──┐   ┌──▼──────────────────┐
-               │  BodyModel.tsx  │   │   RiskPanel.tsx      │
-               │   3D Canvas     │   │   Analysis Output    │
-               └──────────────┬──┘   └──┬───────────────────┘
-                              │          │
-               ┌──────────────▼──┐   ┌──▼──────────────────────┐
-               │  React Three    │   │  Explain Button          │
-               │  Fiber Scene    │   │         ↓                │
-               │  Glow + Pulse   │   │  [Local Rule Engine]     │
-               └─────────────────┘   │       or                 │
-                                     │  [xAI / Groq LLM API]   │
-                                     └─────────────────────────-┘
+┌───────────────────────────────────────────────────────────────────────────┐
+│                        MEDISCAN 3D — DATA FLOW                            │
+├───────────────────────────────────────────────────────────────────────────┤
+│                                                                           │
+│  USER INPUT                                                               │
+│  VitalsForm.tsx  ←  React Hook Form + Zod validation                      │
+│  age · bmi · systolicBP · diastolicBP · glucose · cholesterol             │
+│         │                                                                 │
+│         ▼                                                                 │
+│  RISK ENGINE  ──  lib/riskScore.ts                                        │
+│  ┌──────────────────────────┐  ┌────────────────────────────────────────┐ │
+│  │  cardiovascularRisk()    │  │  metabolicRisk()                       │ │
+│  │  • JNC BP staging        │  │  • WHO BMI categories (18.5 / 25 / 30)│ │
+│  │  • Age decade weighting  │  │  • ADA glucose (100 / 126 mg/dL)      │ │
+│  │  • NCEP cholesterol band │  │  • Age modifier coefficient            │ │
+│  │  → Output: 0–100 score   │  │  → Output: 0–100 score                │ │
+│  └────────────┬─────────────┘  └─────────────────┬──────────────────────┘ │
+│               └──────────────┬──────────────────--┘                       │
+│                              ▼                                            │
+│  VISUALIZATION                                                            │
+│  ┌───────────────────────┐     ┌──────────────────────────────────────┐  │
+│  │  BodyModel.tsx         │     │  RiskPanel.tsx                       │  │
+│  │  React Three Fiber     │     │  ┌──────────────────────────────┐    │  │
+│  │  • Torso mesh          │     │  │ Progress bars (0–100)        │    │  │
+│  │    cardioRisk → color  │     │  │ Color-coded thresholds       │    │  │
+│  │    >50 → sine pulse    │     │  │ Risk level labels            │    │  │
+│  │  • Midsection mesh     │     │  └──────────────────────────────┘    │  │
+│  │    metaRisk → color    │     │  "Explain" button                    │  │
+│  │    >50 → +π pulse      │     │         │                            │  │
+│  │  • OrbitControls       │     │         ▼                            │  │
+│  │  • Auto-rotate Y       │     │  ┌────────────┐  ┌───────────────┐  │  │
+│  └───────────────────────┘     │  │ xAI / Groq │  │  Rule Engine  │  │  │
+│                                │  │ (key set)  │  │  (no key)     │  │  │
+│                                │  └────────────┘  └───────────────┘  │  │
+│                                └──────────────────────────────────────┘  │
+└───────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Key Source Modules
+### Source Module Reference
 
-| Module | Path | Purpose |
-|--------|------|---------|
-| 🫁 **BodyModel** | `components/BodyModel.tsx` | R3F scene, OrbitControls, phong materials, pulsing animation |
-| 📊 **RiskPanel** | `components/RiskPanel.tsx` | Progress gauges, AI explanations, rule-based fallback |
-| 🧮 **Risk Engine** | `lib/riskScore.ts` | Clinical scoring formulas using standard screening thresholds |
+| File | Role |
+|------|------|
+| `components/BodyModel.tsx` | R3F scene, OrbitControls, MeshPhongMaterial, useFrame pulse loop |
+| `components/RiskPanel.tsx` | Score gauges, AI prompt builder, rule-engine fallback |
+| `lib/riskScore.ts` | Cardiovascular and metabolic scoring formulas |
+| `app/` | Next.js 14 App Router pages and layout |
+| `.env.local.example` | AI provider key configuration template |
+| `next.config.js` | Static export mode configuration |
+| `tailwind.config.ts` | Custom dark clinical color palette |
 
 ---
 
 ## 🚀 Tech Stack
 
-<div align="center">
+<a name="-tech-stack"></a>
 
-| Category | Technology | Version |
-|----------|-----------|---------|
-| **Framework** | [Next.js](https://nextjs.org/) | 14 (Static Export) |
-| **Language** | [TypeScript](https://www.typescriptlang.org/) | 5.x |
-| **3D Engine** | [Three.js](https://threejs.org/) | Latest |
-| **3D React Bindings** | [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) | R3F |
-| **3D Helpers** | [@react-three/drei](https://github.com/pmndrs/drei) | Latest |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com/) | 3.x |
-| **Forms** | [React Hook Form](https://react-hook-form.com/) | Latest |
-| **Validation** | [Zod](https://zod.dev/) | Latest |
-| **AI (Optional)** | xAI / Grok or Groq | API |
-| **Package Manager** | pnpm | 9+ |
-
-</div>
+| Layer | Technology | Version | Why |
+|-------|-----------|---------|-----|
+| **Framework** | Next.js | 14 | Static export — deploy anywhere; App Router |
+| **Language** | TypeScript | 5.x | 91.7% of codebase; type-safe risk formulas |
+| **3D Engine** | Three.js | Latest | WebGL mesh rendering, MeshPhongMaterial |
+| **3D Bindings** | React Three Fiber | R3F | useFrame loop, declarative JSX scene graph |
+| **3D Utilities** | @react-three/drei | Latest | OrbitControls, PerspectiveCamera plug-ins |
+| **Styling** | Tailwind CSS | 3.x | Dark clinical theme, utility-first |
+| **Forms** | React Hook Form | Latest | Performant uncontrolled vitals form |
+| **Validation** | Zod | Latest | Type-safe clinical input validation |
+| **AI (Optional)** | xAI / Groq | API | Natural language clinical explanations |
+| **Package Manager** | pnpm | 9+ | Fast installs, strict dependency resolution |
 
 ---
 
-## 💻 Local Development
+## 💻 Getting Started
+
+<a name="-getting-started"></a>
 
 ### Prerequisites
 
-Make sure you have the following installed:
-
-- **Node.js** `v18` or higher
-- **pnpm** `v9` or higher
-
 ```bash
-# Verify your versions
-node --version   # Should be >= 18
-pnpm --version   # Should be >= 9
+node --version    # v18.0.0 or higher
+pnpm --version    # v9.0.0 or higher
 ```
 
-### Setup Instructions
+### Installation
 
-**1. Clone the repository**
 ```bash
+# 1. Clone
 git clone https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer.git
 cd MediScan-3D---Interactive-Health-Risk-Visualizer
-```
 
-**2. Install dependencies**
-```bash
+# 2. Install
 pnpm install
-```
 
-**3. Configure environment (Optional — for AI features)**
-
-Copy the example env file:
-```bash
+# 3. Environment
 cp .env.local.example .env.local
 ```
 
-Add your API key to `.env.local`:
+### Environment Variables
+
+Open `.env.local` and configure one AI provider (both are optional):
+
 ```env
-# Choose one provider:
-NEXT_PUBLIC_GROQ_API_KEY=your_groq_key_here
-# or
-NEXT_PUBLIC_XAI_API_KEY=your_xai_key_here
+# Groq — fast inference, free tier available
+NEXT_PUBLIC_GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# xAI / Grok
+NEXT_PUBLIC_XAI_API_KEY=xai-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-> 💡 **No API key?** No problem. The app automatically falls back to the built-in medical rule engine — no external API needed for core functionality.
+> **No key configured?** The built-in medical rule engine handles all explanations locally — no external calls, no setup required.
 
-**4. Start the development server**
+### Run
+
 ```bash
 pnpm dev
+# → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+### Scripts
 
-### Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start development server with hot reload |
-| `pnpm build` | Build for production (static export) |
-| `pnpm start` | Serve the production build locally |
-| `pnpm lint` | Run ESLint |
-
----
-
-## ☁️ Deployment
-
-MediScan 3D is configured as a **Next.js static export**, making it deployable anywhere that serves static files.
-
-### Deploy to Vercel (Recommended)
-
-Zero-config deployment — Vercel auto-detects Next.js:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer)
-
-### Deploy to Render / GitHub Pages / Netlify
-
-Set the **publish directory** to `out` (Next.js static export output):
-
-```bash
-# Build command
-pnpm build
-
-# Publish directory
-out/
-```
+| Command | Action |
+|---------|--------|
+| `pnpm dev` | Development server with hot reload |
+| `pnpm build` | Production build (static export to `/out`) |
+| `pnpm start` | Serve production build locally |
+| `pnpm lint` | ESLint + Prettier checks |
 
 ---
 
@@ -323,113 +348,168 @@ out/
 ```
 MediScan-3D---Interactive-Health-Risk-Visualizer/
 │
-├── 📁 app/                     # Next.js App Router pages
+├── 📁 app/
+│   ├── layout.tsx              Root layout, dark theme provider
+│   └── page.tsx                Main page — VitalsForm + BodyModel + RiskPanel
+│
 ├── 📁 components/
-│   ├── BodyModel.tsx           # 🫁 3D humanoid scene (R3F + Three.js)
-│   └── RiskPanel.tsx           # 📊 Risk analysis & AI explanations
+│   ├── BodyModel.tsx    ★      3D humanoid scene
+│   │                           • Procedural geometry construction
+│   │                           • MeshPhongMaterial + emissive pulse
+│   │                           • OrbitControls + auto-rotate
+│   └── RiskPanel.tsx    ★      Analysis panel
+│                               • Score progress bars
+│                               • AI / rule-engine explanation
 │
 ├── 📁 lib/
-│   └── riskScore.ts            # 🧮 Clinical risk scoring engine
+│   └── riskScore.ts     ★      Clinical scoring engine
+│                               • cardiovascularRisk(bp, age, chol)
+│                               • metabolicRisk(bmi, age, glucose)
 │
 ├── 📁 public/
-│   ├── logo.png                # MediScan 3D logo
-│   └── poster.png              # App poster / banner
+│   ├── logo.png                MediScan 3D brand mark
+│   └── poster.png              Hero banner image
 │
-├── 📁 .builder/rules/          # Builder configuration
-├── .env.local.example          # Environment variable template
-├── next.config.js              # Next.js configuration (static export)
-├── tailwind.config.ts          # Tailwind dark clinical theme
-├── tsconfig.json               # TypeScript configuration
-└── package.json                # Dependencies & scripts
+├── .env.local.example          AI provider key template
+├── .dockerignore               Docker build exclusions
+├── next.config.js              output: 'export' static mode
+├── tailwind.config.ts          Dark clinical color palette
+├── tsconfig.json               Strict TypeScript configuration
+└── package.json                Dependencies and scripts
 ```
 
 ---
 
 ## 🧠 AI Integration
 
-MediScan 3D supports two AI providers for generating clinical explanations:
+<a name="-ai-integration"></a>
 
-### Supported Providers
-
-| Provider | Environment Variable | Notes |
-|----------|---------------------|-------|
-| **Groq** | `NEXT_PUBLIC_GROQ_API_KEY` | Fast LLM inference |
-| **xAI / Grok** | `NEXT_PUBLIC_XAI_API_KEY` | Grok AI completions |
-
-### Fallback Behavior
+The "Explain" button in `RiskPanel.tsx` triggers a client-side explanation request using the configured provider:
 
 ```
-User clicks "Explain" button
-         │
-         ▼
-  API Key configured?
-    YES ──► Cloud LLM (xAI or Groq)
-    NO  ──► Built-in Medical Rule Engine
-             (Hardcoded clinical thresholds,
-              no external dependencies)
+User clicks "Explain"
+        │
+        ▼
+  API key present?
+        │
+   YES ─┼──────────────────────────────────────────────►  Cloud LLM
+        │                                                  • Vitals + scores sent
+        │                                                  • Returns clinical prose
+        │                                                  • Streamed to RiskPanel
+        │
+   NO  ─┼──────────────────────────────────────────────►  Built-in Rule Engine
+                                                           • BP classification (JNC 8)
+                                                           • BMI staging (WHO)
+                                                           • Glucose risk band (ADA)
+                                                           • Cholesterol tier (NCEP)
+                                                           • Age modifier text
 ```
 
-The built-in rule engine covers:
-- Blood pressure classification (normal / elevated / hypertensive)
-- BMI staging (underweight / normal / overweight / obese)
-- Fasting glucose risk (normal / prediabetic / diabetic range)
-- Cholesterol interpretation (optimal / borderline / high)
-- Age-weighted cardiovascular risk modifiers
+### Provider Support
+
+| Provider | Env Variable | Notes |
+|----------|-------------|-------|
+| **Groq** | `NEXT_PUBLIC_GROQ_API_KEY` | Fastest inference; generous free tier |
+| **xAI / Grok** | `NEXT_PUBLIC_XAI_API_KEY` | Advanced medical reasoning |
+
+### Built-in Rule Engine Reference Ranges
+
+| Vital | Source | Thresholds |
+|-------|--------|-----------|
+| Blood pressure | JNC 8 | Normal <120/80, Elevated 120–129, Stage 1 130–139, Stage 2 ≥140 |
+| BMI | WHO | Underweight <18.5, Normal 18.5–24.9, Overweight 25–29.9, Obese ≥30 |
+| Fasting glucose | ADA | Normal <100, Prediabetes 100–125, Diabetes ≥126 mg/dL |
+| Cholesterol | NCEP ATP III | Optimal <200, Borderline 200–239, High ≥240 mg/dL |
 
 ---
 
-## ⚖️ Clinical Disclaimer
+## ☁️ Deployment
 
-> [!WARNING]
-> **This tool is a screening prototype for educational and demonstration purposes only.**
->
-> MediScan 3D is **not a medical diagnostic device** and does not replace professional medical advice, diagnosis, or treatment. The risk scores and visualizations are generated using simplified, general-purpose clinical heuristics and should not be used to make any medical decisions.
->
-> **Always consult a licensed healthcare professional** for any medical concerns, symptoms, or treatment decisions.
+<a name="-deployment"></a>
+
+MediScan 3D builds to a fully static site (`/out`). No Node.js runtime required — serve it from any CDN.
+
+### Vercel (Recommended — Zero Config)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer)
+
+Vercel auto-detects Next.js. Set your AI env vars in the Vercel dashboard and you're live.
+
+### Any Static Host (Render, Netlify, GitHub Pages, S3)
+
+```bash
+pnpm build          # output goes to /out
+# Upload /out to your host's publish directory
+```
+
+### Docker
+
+```dockerfile
+FROM node:18-alpine
+RUN npm i -g pnpm
+WORKDIR /app
+COPY . .
+RUN pnpm install && pnpm build
+# Serve /out with nginx, serve, or caddy
+```
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how to get started:
+Contributions are welcome — new risk modules, visual improvements, AI provider additions, and bug fixes.
 
-**1. Fork the repository**
 ```bash
-git fork https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer.git
+# 1. Fork → clone → branch
+git checkout -b feat/your-feature-name
+
+# 2. Make changes
+pnpm lint && pnpm build      # must pass
+
+# 3. Commit with conventional commits
+git commit -m "feat: add pulmonary risk zone with SpO2 input"
+
+# 4. Push and open a Pull Request
+git push origin feat/your-feature-name
 ```
 
-**2. Create a feature branch**
-```bash
-git checkout -b feature/your-feature-name
-```
+### Ideas for Contributions
 
-**3. Make your changes and commit**
-```bash
-git commit -m "feat: add your feature description"
-```
+- 🫁 **Pulmonary risk zone** — SpO2, smoking history inputs
+- 🧠 **Neurological risk zone** — stress, sleep, family history
+- 📊 **Risk history timeline** — track vitals over time
+- 🌐 **i18n** — multilingual clinical explanations
+- 📱 **PWA / offline mode** — service worker for fully offline use
 
-**4. Push and open a Pull Request**
-```bash
-git push origin feature/your-feature-name
-```
+---
 
-### Code Style
+## ⚠️ Clinical Disclaimer
 
-This project uses **Prettier** for formatting. Run before committing:
-```bash
-pnpm lint
-```
+> **This tool is a screening prototype for educational and demonstration purposes only.**
+>
+> MediScan 3D is **not a medical diagnostic device** and does not replace professional medical advice, diagnosis, or treatment. Risk scores are generated using simplified clinical heuristics and must not be used to make any medical decisions.
+>
+> **Always consult a licensed healthcare professional** for any health concerns, symptoms, or treatment decisions.
 
 ---
 
 <div align="center">
 
----
+<br />
 
-**Built with ❤️ by [lokojitcoder123](https://github.com/lokojitcoder123)**
+<img src="https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer/raw/main/public/logo.png" width="48" alt="MediScan 3D" />
 
-*MediScan 3D — See your health like never before.*
+**MediScan 3D** — built by [lokojitcoder123](https://github.com/lokojitcoder123)
 
-[![GitHub](https://img.shields.io/badge/GitHub-lokojitcoder123-181717?style=for-the-badge&logo=github)](https://github.com/lokojitcoder123)
+*See your health in a dimension most apps don't.*
+
+<br />
+
+[![GitHub Profile](https://img.shields.io/badge/GitHub-lokojitcoder123-181717?style=for-the-badge&logo=github)](https://github.com/lokojitcoder123)
+[![Repository](https://img.shields.io/badge/Repo-MediScan_3D-0969DA?style=for-the-badge&logo=github)](https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer)
+
+<br />
+
+⭐ **Star this repo if MediScan 3D impressed you** ⭐
 
 </div>
