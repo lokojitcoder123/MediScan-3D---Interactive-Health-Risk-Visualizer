@@ -1,11 +1,10 @@
 <div align="center">
 
 <!-- HERO BANNER -->
-<img src="https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer/raw/main/public/poster.png" width="100%" alt="MediScan 3D — Banner" />
 
 <br /><br />
 
-<img src="https://github.com/lokojitcoder123/MediScan-3D---Interactive-Health-Risk-Visualizer/raw/main/public/logo.png" width="100" alt="MediScan 3D Logo" />
+<img width="1983" height="793" alt="ChatGPT Image Jun 27, 2026, 03_55_12 AM" src="https://github.com/user-attachments/assets/8ff1a902-506d-48c8-9051-5b170fd8f9e3" />
 
 <h1>MediScan 3D</h1>
 <h3>Interactive Health Risk Visualizer</h3>
@@ -13,7 +12,6 @@
 <p><em>Enter your vitals. Watch your body light up in real-time 3D.</em></p>
 
 <br />
-
 <!-- BADGE ROW 1 -->
 <p>
   <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white" />
@@ -214,43 +212,77 @@ drag          →  OrbitControls.onPointerDown      →  orbit (drag / zoom / pa
 
 <a name="-architecture"></a>
 
-```
-┌───────────────────────────────────────────────────────────────────────────┐
-│                        MEDISCAN 3D — DATA FLOW                            │
-├───────────────────────────────────────────────────────────────────────────┤
-│                                                                           │
-│  USER INPUT                                                               │
-│  VitalsForm.tsx  ←  React Hook Form + Zod validation                      │
-│  age · bmi · systolicBP · diastolicBP · glucose · cholesterol             │
-│         │                                                                 │
-│         ▼                                                                 │
-│  RISK ENGINE  ──  lib/riskScore.ts                                        │
-│  ┌──────────────────────────┐  ┌────────────────────────────────────────┐ │
-│  │  cardiovascularRisk()    │  │  metabolicRisk()                       │ │
-│  │  • JNC BP staging        │  │  • WHO BMI categories (18.5 / 25 / 30)│ │
-│  │  • Age decade weighting  │  │  • ADA glucose (100 / 126 mg/dL)      │ │
-│  │  • NCEP cholesterol band │  │  • Age modifier coefficient            │ │
-│  │  → Output: 0–100 score   │  │  → Output: 0–100 score                │ │
-│  └────────────┬─────────────┘  └─────────────────┬──────────────────────┘ │
-│               └──────────────┬──────────────────--┘                       │
-│                              ▼                                            │
-│  VISUALIZATION                                                            │
-│  ┌───────────────────────┐     ┌──────────────────────────────────────┐  │
-│  │  BodyModel.tsx         │     │  RiskPanel.tsx                       │  │
-│  │  React Three Fiber     │     │  ┌──────────────────────────────┐    │  │
-│  │  • Torso mesh          │     │  │ Progress bars (0–100)        │    │  │
-│  │    cardioRisk → color  │     │  │ Color-coded thresholds       │    │  │
-│  │    >50 → sine pulse    │     │  │ Risk level labels            │    │  │
-│  │  • Midsection mesh     │     │  └──────────────────────────────┘    │  │
-│  │    metaRisk → color    │     │  "Explain" button                    │  │
-│  │    >50 → +π pulse      │     │         │                            │  │
-│  │  • OrbitControls       │     │         ▼                            │  │
-│  │  • Auto-rotate Y       │     │  ┌────────────┐  ┌───────────────┐  │  │
-│  └───────────────────────┘     │  │ xAI / Groq │  │  Rule Engine  │  │  │
-│                                │  │ (key set)  │  │  (no key)     │  │  │
-│                                │  └────────────┘  └───────────────┘  │  │
-│                                └──────────────────────────────────────┘  │
-└───────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    %% Styling definitions
+    classDef input fill:#22d3ee,stroke:#0891b2,stroke-width:2px,color:#000;
+    classDef engine fill:#a855f7,stroke:#7e22ce,stroke-width:2px,color:#fff;
+    classDef view fill:#f43f5e,stroke:#be123c,stroke-width:2px,color:#fff;
+    classDef output fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff;
+    classDef service fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:#fff;
+
+    %% Nodes
+    subgraph UI_INPUT ["1. User Biometric Inputs (VitalsForm.tsx)"]
+        AgeNode["Age"]:::input
+        BMINode["BMI"]:::input
+        BPNode["Blood Pressure (Sys/Dia)"]:::input
+        GlucoseNode["Fasting Glucose"]:::input
+        CholNode["Total Cholesterol"]:::input
+    end
+
+    subgraph ENGINE ["2. Clinical Screening Engine (lib/riskScore.ts)"]
+        CardioRisk["cardiovascularRisk()"]:::engine
+        MetaRisk["metabolicRisk()"]:::engine
+        OverallRisk["overallRisk()"]:::engine
+        
+        CardioRisk -.->|"JNC 8 Guidelines"| CardioRules["BP Stages & Age Weighting"]
+        MetaRisk -.->|"WHO & ADA Guidelines"| MetaRules["BMI Staging & Fasting Glucose bands"]
+    end
+
+    subgraph VISUAL ["3. 3D Body Mesh Renderer (components/BodyModel.tsx)"]
+        Canvas3D["React Three Fiber Canvas"]:::view
+        TorsoMesh["Torso Geometry (Cardio Zone)"]:::view
+        MidsectionMesh["Midsection Geometry (Metabolic Zone)"]:::view
+        Controls3D["OrbitControls (Rotation, Zoom, Hover Pause)"]:::view
+    end
+
+    subgraph PANEL ["4. Dynamic Risk Assessment Panel (components/RiskPanel.tsx)"]
+        Gauges["Progress Gauges (0-100)"]:::output
+        ExplainBtn["'Explain This Score' Trigger"]:::output
+    end
+
+    subgraph INTEGRATION ["5. AI & Local Explanation Layer"]
+        LocalEngine["Local Rule-based Explanations"]:::service
+        GroqAPI["Groq Cloud Completion (llama-3.3-70b)"]:::service
+        xAIAPI["xAI Cloud Completion (grok-2-1212)"]:::service
+        GeminiAPI["Google Gemini Completion (gemini-2.5-flash)"]:::service
+    end
+
+    %% Data Flow Connections
+    AgeNode & BPNode & CholNode --> CardioRisk
+    AgeNode & BMINode & GlucoseNode --> MetaRisk
+    CardioRisk & MetaRisk --> OverallRisk
+
+    %% Outputs to 3D Canvas
+    CardioRisk -->|"Cardio Score"| TorsoMesh
+    MetaRisk -->|"Metabolic Score"| MidsectionMesh
+
+    %% Color & Pulse Logic
+    TorsoMesh -->|"> 50 Risk"| Pulse1["Sine Pulse Glow"]
+    MidsectionMesh -->|"> 50 Risk"| Pulse2["Sine Pulse Glow (Shifted by π)"]
+
+    %% Outputs to Dashboard
+    OverallRisk & CardioRisk & MetaRisk --> Gauges
+    Gauges --> ExplainBtn
+
+    %% Explain Trigger Routing
+    ExplainBtn -->|"No API Key Set"| LocalEngine
+    ExplainBtn -->|"Groq Key Set"| GroqAPI
+    ExplainBtn -->|"xAI Key Set"| xAIAPI
+    ExplainBtn -->|"Gemini Key Set"| GeminiAPI
+
+    %% Final Output
+    LocalEngine & GroqAPI & xAIAPI & GeminiAPI -->|"Structured Explanations"| PanelOutput["Clinical Explanation Text Box"]:::output
 ```
 
 ### Source Module Reference
@@ -313,14 +345,17 @@ cp .env.local.example .env.local
 
 ### Environment Variables
 
-Open `.env.local` and configure one AI provider (both are optional):
+Open `.env.local` and configure one AI provider (all are optional):
 
 ```env
 # Groq — fast inference, free tier available
 NEXT_PUBLIC_GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-# xAI / Grok
+# (Optional) xAI / Grok
 NEXT_PUBLIC_XAI_API_KEY=xai-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# (Optional) Google Gemini
+NEXT_PUBLIC_GEMINI_API_KEY=AIzaSyxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 > **No key configured?** The built-in medical rule engine handles all explanations locally — no external calls, no setup required.
@@ -411,6 +446,7 @@ User clicks "Explain"
 |----------|-------------|-------|
 | **Groq** | `NEXT_PUBLIC_GROQ_API_KEY` | Fastest inference; generous free tier |
 | **xAI / Grok** | `NEXT_PUBLIC_XAI_API_KEY` | Advanced medical reasoning |
+| **Google Gemini** | `NEXT_PUBLIC_GEMINI_API_KEY` | Generative language modeling |
 
 ### Built-in Rule Engine Reference Ranges
 
@@ -513,3 +549,4 @@ git push origin feat/your-feature-name
 ⭐ **Star this repo if MediScan 3D impressed you** ⭐
 
 </div>
+
